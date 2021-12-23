@@ -1,0 +1,26 @@
+#method 1 
+import itertools
+from itertools import combinations
+sk=input().split()
+s=sk[0] #string in 0
+k=int(sk[1]) # k(integer) in 1
+for i in range(1, k+1):
+    words=list(itertools.combinations(sorted(s),i))
+    for i in words:
+        for j in i:
+            print(j, end='')
+        print()    
+
+
+
+# method 2
+from itertools import combinations
+s,k=input().split()
+s=sorted(s)
+k=int(k)
+
+for letter in range(1,k+1):
+    for i in list(combinations(s,letter)):
+        print(''.join(i))
+
+
